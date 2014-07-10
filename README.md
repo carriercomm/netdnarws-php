@@ -1,5 +1,4 @@
 # MaxCDN REST API PHP Client
-====================================
 
 ## Requirements
 - PHP 5.3 or above
