@@ -1,7 +1,4 @@
-#We're Hiring!
-Do you like building cool stuff?  Do APIs keep you up at night? We're looking for our next superstar hacker and you could be it. Interested? Check out our job posting on [stackoverflow](http://careers.stackoverflow.com/jobs/37078/senior-web-engineer-for-fun-growing-la-startup-maxcdn&a=JdFbT4OY).
-
-# MaxCDN REST Web Services PHP Client
+# MaxCDN REST API PHP Client
 ====================================
 
 ## Requirements
@@ -45,15 +42,6 @@ require_once '/path/to/vendor/autoload.php';
 
 It is advised that you understand how to optimze Composer's usage in Production environments.  For more information about Composer, visit http://getcomposer.org
 
-
-## Manual Installation
-
-```shell
-$ wget https://github.com/MaxCDN/MaxCDNrws-php/zipball/master
-$ unzip master
-$ cd MaxCDN-MaxCDNrws-php-*
-```
-
 The libraries are located in the src/ directory.  The classes are organized in a PSR-0 hierarchy.  You can use any PSR-0 compliant autoloader for this library. Composer is the recommended method (see above).
 
 ## Usage
@@ -75,4 +63,3 @@ echo $api->delete('/zones/pull.json/6055/cache', $params);
 ## Methods
 
 It has support for `GET`, `POST`, `PUT` and `DELETE` OAuth signed requests.
-
