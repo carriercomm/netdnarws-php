@@ -1,5 +1,5 @@
 {
-    "name": "MaxCDN/rws-sdk-php",
+    "name": "maxcdn/php-maxcdn",
     "description": "PHP Wrapper for MaxCDN Remote Web Services",
     "type": "library",
     "license": "MIT",
