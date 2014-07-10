@@ -6,7 +6,7 @@
  * character (ASCII code 38) even if empty.
  *   - Chapter 9.2 ("HMAC-SHA1")
  */
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod {
   function get_name() {

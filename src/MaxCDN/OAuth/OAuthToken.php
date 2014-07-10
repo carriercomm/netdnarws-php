@@ -2,7 +2,7 @@
 /**
  * Represents an OAuth Token.
  */
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthToken {
     // access tokens and request tokens

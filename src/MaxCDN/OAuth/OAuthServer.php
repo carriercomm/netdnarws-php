@@ -1,5 +1,5 @@
 <?php
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthServer {
     protected $timestamp_threshold = 300; // in seconds, five minutes

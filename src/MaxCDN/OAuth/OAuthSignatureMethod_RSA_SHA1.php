@@ -7,7 +7,7 @@
  * specification.
  *   - Chapter 9.3 ("RSA-SHA1")
  */
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 abstract class OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod {
     public function get_name() {

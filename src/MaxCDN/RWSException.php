@@ -1,5 +1,5 @@
 <?php
-namespace NetDNA;
+namespace MaxCDN;
 
 class RWSException extends \Exception {
   

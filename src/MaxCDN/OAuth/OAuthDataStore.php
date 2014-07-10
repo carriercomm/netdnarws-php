@@ -1,5 +1,5 @@
 <?php
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthDataStore {
     function lookup_consumer($consumer_key) {

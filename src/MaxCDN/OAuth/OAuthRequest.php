@@ -1,5 +1,5 @@
 <?php
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthRequest {
     protected $parameters;

@@ -3,7 +3,7 @@
  * A class for implementing a Signature Method
  * See section 9 ("Signing Requests") in the spec
  */
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 abstract class OAuthSignatureMethod {
     /**

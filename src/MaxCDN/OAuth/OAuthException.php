@@ -2,7 +2,7 @@
 /**
  * Exception class for OAuth failures.
  */
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthException extends Exception {
     // pass

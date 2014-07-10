@@ -1,7 +1,7 @@
 #We're Hiring!
 Do you like building cool stuff?  Do APIs keep you up at night? We're looking for our next superstar hacker and you could be it. Interested? Check out our job posting on [stackoverflow](http://careers.stackoverflow.com/jobs/37078/senior-web-engineer-for-fun-growing-la-startup-maxcdn&a=JdFbT4OY).
 
-# NetDNA REST Web Services PHP Client
+# MaxCDN REST Web Services PHP Client
 ====================================
 
 ## Requirements
@@ -9,14 +9,14 @@ Do you like building cool stuff?  Do APIs keep you up at night? We're looking fo
 - PHP Curl Extension
 
 ## Installation with Composer
-Composer is the recommended way to utilize the NetDNA RWS SDK PHP library.  For more information on how to use Composer, see http://www.getcomposer.org .  
+Composer is the recommended way to utilize the MaxCDN RWS SDK PHP library.  For more information on how to use Composer, see http://www.getcomposer.org .  
 
-1. Add "netdna/rws-sdk-php" as a dependency in your composer.json project file.
+1. Add "MaxCDN/rws-sdk-php" as a dependency in your composer.json project file.
 
 ```json
 {
     "require": {
-        "netdna/rws-sdk-php": "2.*"
+        "MaxCDN/rws-sdk-php": "2.*"
     }
 }
 ```
@@ -33,7 +33,7 @@ curl -sS https://getcomposer.org/installer | php
 php composer.phar install -o
 ```
 
-This will download the NetDNA library and configure composer to use it.  Composer will also build an autoloader for your use in the next step.
+This will download the MaxCDN library and configure composer to use it.  Composer will also build an autoloader for your use in the next step.
 
 4. Use Composer's autoloader.
 
@@ -49,9 +49,9 @@ It is advised that you understand how to optimze Composer's usage in Production 
 ## Manual Installation
 
 ```shell
-$ wget https://github.com/netdna/netdnarws-php/zipball/master
+$ wget https://github.com/MaxCDN/MaxCDNrws-php/zipball/master
 $ unzip master
-$ cd netdna-netdnarws-php-*
+$ cd MaxCDN-MaxCDNrws-php-*
 ```
 
 The libraries are located in the src/ directory.  The classes are organized in a PSR-0 hierarchy.  You can use any PSR-0 compliant autoloader for this library. Composer is the recommended method (see above).
@@ -60,7 +60,7 @@ The libraries are located in the src/ directory.  The classes are organized in a
 ```php
 <?php
 
-$api = new NetDNA("my_alias","consumer_key","consumer_secret");
+$api = new MaxCDN("my_alias","consumer_key","consumer_secret");
 
 // get account information
 echo  $api->get('/account.json');

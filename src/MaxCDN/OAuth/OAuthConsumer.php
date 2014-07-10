@@ -2,7 +2,7 @@
 /**
  * OAuth Consumer representation.
  */
-namespace NetDNA\OAuth;
+namespace MaxCDN\OAuth;
 
 class OAuthConsumer {
     public $key;
@@ -15,7 +15,7 @@ class OAuthConsumer {
     }
 
     function __toString() {
-        return "\\NetDNA\\OAuth\\OAuthConsumer[key=$this->key,secret=$this->secret]";
+        return "\\MaxCDN\\OAuth\\OAuthConsumer[key=$this->key,secret=$this->secret]";
     }
 }
 

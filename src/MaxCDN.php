@@ -1,12 +1,12 @@
 <?php
 /** 
- * NetDNA REST Client Library
+ * MaxCDN REST Client Library
  * 
  * @copyright 2012
  * @author Karlo Espiritu
  * @version 1.0 2012-09-21
 */
-class NetDNA {
+class MaxCDN {
 	
 	public $alias;
 
@@ -14,7 +14,7 @@ class NetDNA {
 
 	public $secret;
 	
-	public $netdnarws_url = 'https://rws.netdna.com';
+	public $MaxCDNrws_url = 'https://rws.maxcdn.com';
 	
     private $consumer;
 	
@@ -22,13 +22,13 @@ class NetDNA {
 		$this->alias  = $alias;
 		$this->key    = $key;
 		$this->secret = $secret;
-		$this->consumer = new \NetDNA\OAuth\OAuthConsumer($key, $secret, NULL);
+		$this->consumer = new \MaxCDN\OAuth\OAuthConsumer($key, $secret, NULL);
 		
 	}
 
 	private function execute($selected_call, $method_type, $params) {
 		// the endpoint for your request
-		$endpoint = "$this->netdnarws_url/$this->alias$selected_call"; 
+		$endpoint = "$this->MaxCDNrws_url/$this->alias$selected_call"; 
 		
 		//parse endpoint before creating OAuth request
 		$parsed = parse_url($endpoint);
@@ -38,10 +38,10 @@ class NetDNA {
 		}
 
 		//generate a request from your consumer
-		$req_req = \NetDNA\OAuth\OAuthRequest::from_consumer_and_token($this->consumer, NULL, $method_type, $endpoint, $params);
+		$req_req = \MaxCDN\OAuth\OAuthRequest::from_consumer_and_token($this->consumer, NULL, $method_type, $endpoint, $params);
 
 		//sign your OAuth request using hmac_sha1
-		$sig_method = new \NetDNA\OAuth\OAuthSignatureMethod_HMAC_SHA1();
+		$sig_method = new \MaxCDN\OAuth\OAuthSignatureMethod_HMAC_SHA1();
 		$req_req->sign_request($sig_method, $this->consumer, NULL);
 
 		// create curl resource 
@@ -64,7 +64,7 @@ class NetDNA {
 
 
 		if ($method_type == "POST" || $method_type == "PUT" || $method_type == "DELETE") {
-		    $query_str = \NetDNA\OAuth\OAuthUtil::build_http_query($params);
+		    $query_str = \MaxCDN\OAuth\OAuthUtil::build_http_query($params);
 		    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:', 'Content-Length: ' . strlen($query_str)));
 		    curl_setopt($ch, CURLOPT_POSTFIELDS,  $query_str);
 		}
@@ -74,7 +74,7 @@ class NetDNA {
 		curl_setopt($ch, CURLINFO_HEADER_OUT, 1);
 		
 		//set user agent
-		curl_setopt($ch, CURLOPT_USERAGENT, 'PHP NetDNA API Client');
+		curl_setopt($ch, CURLOPT_USERAGENT, 'PHP MaxCDN API Client');
 
 		// make call
 		$result = curl_exec($ch);
@@ -89,7 +89,7 @@ class NetDNA {
 
 		// catch errors
 		if(!empty($curl_error) || empty($json_output)) { 
-			throw new \NetDNA\RWSException("CURL ERROR: $curl_error, Output: $json_output", $headers['http_code'], null, $headers);
+			throw new \MaxCDN\RWSException("CURL ERROR: $curl_error, Output: $json_output", $headers['http_code'], null, $headers);
 		}
 
 		return $json_output;
